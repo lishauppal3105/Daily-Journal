@@ -1,0 +1,9 @@
+<%- include("partials/header") -%>
+<h1>Home</h1>
+<p><%= startingContent %></p>
+<% newCompose.forEach(function(compose){ %>
+  <h1><%= compose.postTitle %></h1>
+  <p><%= compose.postBody.substring(0, 100) + "..." %>
+    <a href="/posts/><%= compose.postTitle %>">Read More</a> </p>
+<% }); %>
+<%- include("partials/footer") -%>
